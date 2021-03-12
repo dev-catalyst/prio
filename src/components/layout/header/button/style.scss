@@ -1,0 +1,13 @@
+@import "../../../../styles/utilities/utilities";
+
+#headerButton {
+  background-color: $primary-color;
+  min-width: 253px;
+  height: 75px;
+  border-radius: 700px;
+  font-family: "Euclid";
+  font-weight: 400;
+  font-size: 19px;
+  text-transform: capitalize;
+  box-shadow: none;
+}

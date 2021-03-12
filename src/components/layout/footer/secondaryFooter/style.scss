@@ -1,0 +1,21 @@
+@import "../../../../styles/utilities/utilities";
+
+.secondaryFooter {
+  width: 100%;
+  height: 100px;
+  background-color: $secondary-color;
+  @include flexCenter(center, center, row);
+  font-family: "Euclid";
+
+  &-items {
+    height: 100%;
+    list-style: none;
+    color: #fff;
+    @include flexCenter(space-evenly, center, row);
+  }
+  &-item {
+    margin: 0 30px;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../../../styles/utilities/utilities";
+
+.primaryFooter {
+  width: 100%;
+  background-color: #f8fafb;
+  padding: 50px;
+  font-family: "Euclid";
+
+  .container {
+    @include flexCenter(space-evenly, flex-start, row);
+    margin: auto;
+  }
+
+  &-section {
+    @include flexCenter(center, center, column);
+    text-align: center;
+    min-width: 185px;
+
+    &-title {
+      font-size: 25px;
+      color: #2d3142;
+    }
+    &-links {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+    }
+    &-link {
+      padding-bottom: 40px;
+      color: rgba(28, 43, 73, 0.7);
+      font-size: 17px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    &-logos {
+      margin-top: 1em;
+      margin-bottom: 40px;
+    }
+    &-logo {
+      height: 48px;
+      width: 48px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &-prioLogo {
+      margin-bottom: 60px;
+    }
+    &-logosWide {
+      @include flexCenter(center, center, row);
+      margin: 20px 0;
+    }
+    &-logoWide {
+      margin: 0 40px;
+    }
+  }
+}

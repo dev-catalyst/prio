@@ -1,0 +1,30 @@
+@import "../../../styles/utilities/utilities";
+
+#arrowButton {
+  // background-color: $primary-color;
+  color: #fff;
+  min-width: 334px;
+  height: 75px;
+  border-radius: 700px;
+  font-size: 16px;
+  text-transform: capitalize;
+  box-shadow: none;
+  // padding-right: 80px;
+}
+
+.arrowButton {
+  position: relative;
+  .arrowButton-union {
+    position: absolute;
+    width: 25px;
+    height: 6px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-60px);
+    transition: all 0.6s ease-in-out;
+  }
+  &:hover {
+    .arrowButton-union {
+      transform: translateY(-50%) translateX(-45px);
+    }
+  }
+}

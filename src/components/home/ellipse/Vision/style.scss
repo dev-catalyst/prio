@@ -1,0 +1,41 @@
+@import "../../../../styles/utilities/utilities";
+
+.vision {
+  width: 100%;
+  @include flexCenter(flex-start, flex-start, row);
+  transform: translateX(-50px);
+  font-family: "Euclid";
+
+  &-graph {
+    transform: rotateY(180deg);
+  }
+
+  &-information {
+    @include flexCenter(flex-start, flex-start, column);
+    width: 580px;
+    margin-left: 40px;
+
+    &-subtitle {
+      font-size: 19px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 15px;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    &-title {
+      color: #fff;
+      font-size: 42px;
+      line-height: 62px;
+      margin: 30px 0;
+      font-weight: 400;
+    }
+    &-description {
+      font-size: 21px;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+      line-height: 32px;
+      font-weight: 400;
+    }
+  }
+}
