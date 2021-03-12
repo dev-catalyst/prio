@@ -7,6 +7,13 @@ import faceVideo from "../../../assets/images/1046787226-hd.mp4"
 import "./style.scss"
 
 function index() {
+  const smothScroll = () => {
+    const element = document.getElementById("section2");
+    if(element){
+      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+    
+  }
   return (
     <div className="hero">
       {/* <img className="hero-video" src={face} alt="hero face" /> */}
@@ -24,6 +31,12 @@ function index() {
             backgroundColor="#F46853"
           />
         </div>
+        <span className="scroll-btn" onClick={smothScroll}>
+            <span className="mouse">
+              <span></span>
+            </span>
+            scroll
+        </span>
       </div>
     </div>
   )
