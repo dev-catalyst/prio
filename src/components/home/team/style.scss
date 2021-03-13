@@ -1,0 +1,10 @@
+@import "../../../styles/utilities/utilities";
+
+.team {
+  padding-top: 100px;
+  overflow: hidden;
+  background-color: #fff;
+  .container {
+    @include flexCenter(space-between, flex-start, row);
+  }
+}

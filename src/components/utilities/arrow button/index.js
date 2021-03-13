@@ -1,6 +1,5 @@
 import React from "react"
 import { Button } from "@react-md/button"
-import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
 
@@ -12,12 +11,13 @@ function arrowButton(props) {
         themeType="contained"
         style={{
           paddingRight: props.paddingRight,
+          color: props.color,
           backgroundColor: props.backgroundColor,
         }}
       >
         {props.text}
       </Button>
-      <img className="arrowButton-union" src={union} alt="arrow button" />
+      <img className="arrowButton-union" src={props.union} alt="arrow button" />
     </div>
   )
 }

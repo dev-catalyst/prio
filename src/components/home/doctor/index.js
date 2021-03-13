@@ -5,6 +5,7 @@ import doctor from "../../../assets/images/home/image 211.png"
 import doctors from "../../../assets/images/home/image 200.png"
 import graph1 from "../../../assets/images/home/graph 3a.svg"
 import graph2 from "../../../assets/images/home/graph 3b.svg"
+import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
 
@@ -26,12 +27,14 @@ function Doctor() {
             <ArrowButton
               text="Doctor's Page"
               paddingRight="120px"
+              color="#fff"
               backgroundColor="#1C2B49"
+              union={union}
             />
           </div>
         </div>
         <div className="doctor-graph">
-          <img src={doctors} alt="doctor" />
+          <img className="doctor-graph-doctors" src={doctors} alt="doctor" />
           <div className="doctor-graph-container">
             <img
               className="doctor-graph-container-image1"

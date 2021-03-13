@@ -2,11 +2,19 @@
 
 .doctor {
   width: 100%;
-  margin-top: 100px;
+  padding-top: 100px;
   overflow: hidden;
+  background-color: #fff;
   font-family: "Euclid";
   &-info {
     @include flexCenter(center, center, row);
+
+    img {
+      transition: all 0.3s ease-in;
+      &:hover {
+        transform: scale(1.015);
+      }
+    }
 
     &-container {
       width: 500px;
@@ -26,6 +34,13 @@
   &-graph {
     @include flexCenter(center, flex-end, row);
     transform: translateY(-100px);
+    &-doctors {
+      z-index: 10;
+      transition: all 0.3s ease-in;
+      &:hover {
+        transform: scale(1.015);
+      }
+    }
 
     &-container {
       position: relative;
