@@ -3,6 +3,8 @@
 .container {
   max-width: 1440px;
   margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header {
@@ -14,6 +16,8 @@
   height: 120px;
   padding: 0 80px;
   z-index: 1;
+  left: 0;
+  right: 0;
   @include flexCenter(space-between, center, row);
 
   &-links {
