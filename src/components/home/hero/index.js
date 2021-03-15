@@ -1,16 +1,17 @@
 import React from "react"
-import Heading from "../../utilities/heading"
 import ArrowButton from "../../utilities/arrow button"
-// import face from "../../../assets/images/home/image 206.png"
-import faceVideo from "../../../assets/images/1046787226-hd.mp4"
+import facevideoMp4 from "../../../assets/video/video.mp4"
+import faceVideoImg from "../../../assets/video/video-img.jpg"
+import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
 
 function index() {
   return (
     <div className="hero">
-      {/* <img className="hero-video" src={face} alt="hero face" /> */}
-      <video className="hero-video" src={faceVideo} autoPlay muted loop />
+      <video className="hero-video" autoPlay muted loop  poster={faceVideoImg}> 
+        <source src={facevideoMp4} type="video/mp4" />
+      </video>
       <div className="container">
         <div className="hero-content">
           <Heading
