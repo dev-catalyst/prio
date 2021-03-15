@@ -4,6 +4,7 @@ import ArrowButton from "../../utilities/arrow button"
 // import face from "../../../assets/images/home/image 206.png"
 import faceVideo1 from "../../../assets/images/1046787226-hd.mp4"
 import faceVideo2 from "../../../assets/images/1046787226-hd.webm"
+// import faceVideo3 from "../../../assets/images/1046787226-hd.mov"
 import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
@@ -22,7 +23,10 @@ function Hero() {
   return (
     <div className="hero">
       {/* <img className="hero-video" src={face} alt="hero face" /> */}
-      <video className="hero-video" src={faceVideo2} autoPlay muted loop />
+      <video className="hero-video" autoPlay muted loop>
+        <source src={faceVideo1} type="video/mp4" />
+        <source src={faceVideo2} type="video/webm" />
+      </video>
       <div className="container">
         <div className="hero-content">
           <h1 className="hero-content-header">
