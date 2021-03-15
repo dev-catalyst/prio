@@ -6,19 +6,51 @@
   padding-right: 50px;
   padding-top: 80px;
   padding-bottom: 100px;
+  @media only screen and (max-width: 991.98px) {
+    padding-right: 0;
+  }
 
   &-image {
     position: absolute;
     z-index: -1;
-    top: 160px;
-    transform: translateX(50px);
+    top: 225px;
+    right: 0;
+    @media only screen and (min-width: 1600px) {
+      right: 0px;
+      width: calc(100% - 400px);
+    }
+    @media only screen and (min-width: 1900px) {
+      width: 74%;
+      height: 100%;
+      top: -200px;
+    }
+    @media only screen and (max-width: 991.98px) {
+      top: 25%;
+    }
   }
 
   &-duo {
+    max-width: 50%;
     @include flexCenter(center, flex-end, column);
     margin-right: 25px;
+    @media only screen and (max-width: 991.98px) {
+      margin-right: 10px;
+      max-width: 90%;
+    }
+    :nth-child(1) {
+      @media only screen and (max-width: 991.98px) {
+        max-width: 60%;
+      }
+    }
     :nth-child(2) {
+      max-width: 100%;
       margin-top: 25px;
+      @media only screen and (max-width: 991.98px) {
+        max-width: 90%;
+      }
+      @media only screen and (max-width: 975.98px) {
+        max-width: 96%;
+      }
     }
     * {
       transition: all 0.3s ease-in;
@@ -28,7 +60,12 @@
     }
   }
   &-single {
+    max-width: 40%;
+    @media only screen and (max-width: 991.98px) {
+      display: none;
+    }
     &-image {
+      max-width: 100%;
       transform: translateY(20%);
       transition: all 0.3s ease-in;
       &:hover {

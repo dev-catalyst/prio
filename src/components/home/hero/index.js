@@ -7,7 +7,17 @@ import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
 
-function index() {
+function Hero() {
+  const smothScroll = () => {
+    const element = document.getElementById("section2")
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      })
+    }
+  }
   return (
     <div className="hero">
       <video className="hero-video" autoPlay muted loop  poster={faceVideoImg}> 
@@ -15,20 +25,26 @@ function index() {
       </video>
       <div className="container">
         <div className="hero-content">
-          <Heading
-            text="EINE ZUKUNFT IN DER DEINE GESUNDHEIT PRIO ONE IST"
-            color="#fff"
-            size="45px"
-          />
+          <h1 className="hero-content-header">
+            EINE ZUKUNFT IN DER DEINE GESUNDHEIT PRIO ONE IST
+          </h1>
           <ArrowButton
             text="Hier geht’s zur Pille"
             paddingRight="80px"
+            color="#fff"
             backgroundColor="#F46853"
+            union={union}
           />
         </div>
+        <span className="scroll-btn" onClick={smothScroll}>
+          <span className="mouse">
+            <span></span>
+          </span>
+          scroll
+        </span>
       </div>
     </div>
   )
 }
 
-export default index
+export default Hero

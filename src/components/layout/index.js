@@ -1,10 +1,32 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { Helmet } from "react-helmet"
 import Header from "./header"
 import Footer from "./footer"
 
-function layout({ children }) {
+const useSiteMetadata = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+        }
+      }
+    }
+  `)
+  return data.site.siteMetadata
+}
+
+function Layout({ children }) {
+  const { title, description } = useSiteMetadata()
+
   return (
     <div>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <Header />
       {children}
       <Footer />
@@ -12,4 +34,4 @@ function layout({ children }) {
   )
 }
 
-export default layout
+export default Layout

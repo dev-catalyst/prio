@@ -1,7 +1,7 @@
 import React from "react"
 import "./style.scss"
 
-function heading(props) {
+function Heading(props) {
   return (
     <h1
       className="heading"
@@ -12,4 +12,4 @@ function heading(props) {
   )
 }
 
-export default heading
+export default Heading

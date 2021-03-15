@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-sass`],
+  siteMetadata: {
+    title: "prio.one",
+    description: "EINE ZUKUNFT IN DER DEINE GESUNDHEIT PRIO ONE IST",
+  },
+
+  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-react-helmet`],
 }
