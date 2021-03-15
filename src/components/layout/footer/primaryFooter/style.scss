@@ -5,10 +5,25 @@
   background-color: #f8fafb;
   padding: 50px;
   font-family: "Euclid";
+  @media only screen and (max-width: 575.98px) {
+    padding: 50px 10px;
+  }
 
   .container {
     @include flexCenter(space-evenly, flex-start, row);
     margin: auto;
+
+    @media only screen and (max-width: 991.98px) {
+      .social-media-section {
+        order: -1;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      flex-wrap: wrap;
+    }
+    @media only screen and (max-width: 575.98px) {
+      // justify-content: space-between;
+    }
   }
 
   &-section {
@@ -19,6 +34,9 @@
     &-title {
       font-size: 25px;
       color: #2d3142;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 20px;
+      }
     }
     &-links {
       list-style: none;
@@ -34,6 +52,9 @@
       transition: all 0.3s ease-in;
       &:hover {
         color: $primary-color;
+      }
+      @media only screen and (max-width: 575.98px) {
+        font-size: 16px;
       }
     }
     &-logos {
@@ -52,13 +73,25 @@
     }
     &-prioLogo {
       margin-bottom: 60px;
+      @media only screen and (max-width: 991.98px) {
+        margin-bottom: 20px;
+      }
     }
     &-logosWide {
       @include flexCenter(center, center, row);
       margin: 20px 0;
+      @media only screen and (max-width: 575.98px) {
+        flex-direction: column;
+      }
     }
     &-logoWide {
       margin: 0 40px;
+      @media only screen and (max-width: 767.98px) {
+        margin: 0 20px;
+      }
+      @media only screen and (max-width: 575.98px) {
+        margin: 30px 0;
+      }
     }
   }
 }

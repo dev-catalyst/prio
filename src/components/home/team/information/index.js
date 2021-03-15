@@ -4,7 +4,7 @@ import union from "../../../../assets/images/utilities/Union2.svg"
 
 import "./style.scss"
 
-function information() {
+function Information() {
   return (
     <div className="information">
       <div className="information-info">
@@ -30,4 +30,4 @@ function information() {
   )
 }
 
-export default information
+export default Information

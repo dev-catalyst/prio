@@ -9,16 +9,15 @@ import member1 from "../../../../assets/images/home/member1.png"
 import member2 from "../../../../assets/images/home/member2.png"
 
 import "./style.scss"
-import { getPercentage } from "react-md"
 
 const RightArrow = ({ className, style, onClick }) => (
   <div
-    className="right-arrow"
+    className="team-right-arrow"
     style={{
       ...style,
       position: "absolute",
       bottom: "0",
-      transform: "translateX(-100%) translateY(200%)",
+      transform: "translateX(100%) translateY(200%)",
       left: "135px",
       width: "60px",
       height: "60px",
@@ -41,12 +40,12 @@ const RightArrow = ({ className, style, onClick }) => (
 
 const LeftArrow = ({ className, style, onClick }) => (
   <div
-    className="left-arrow"
+    className="team-left-arrow"
     style={{
       ...style,
       position: "absolute",
       bottom: "0",
-      transform: "translateX(-50%) translateY(200%)",
+      transform: "translateX(150%) translateY(200%)",
       left: "30px",
       width: "60px",
       height: "60px",
@@ -72,18 +71,23 @@ var settings = {
   dots: false,
   infinite: false,
   speed: 500,
-  slidesToShow: 2,
+  slidesToShow: 1,
   slidesToScroll: 1,
-  centerPadding: "20px",
-  centerMode: false,
+  centerMode: true,
+  centerPadding: "25%",
   nextArrow: <RightArrow />,
   prevArrow: <LeftArrow />,
   responsive: [
     {
-      breakpoint: 1400,
+      breakpoint: 1170,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        // centerMode: false,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        // centerMode: true,
       },
     },
   ],
@@ -94,13 +98,13 @@ const members = [
     image: member1,
   },
   {
-    image: member2,
+    image: member1,
   },
   {
     image: member1,
   },
   {
-    image: member2,
+    image: member1,
   },
 ]
 
@@ -134,21 +138,12 @@ function TeamCarousel() {
             </div>
           )
         })}
-        {/* <div className="teamCarousel-slider-card">
-          <img src={member1} alt="member 1" />
-        </div>
-        <div className="teamCarousel-slider-card">
-          <img src={member2} alt="member 2" />
-        </div>
-        <div className="teamCarousel-slider-card">
-          <img src={member1} alt="member 1" />
-        </div> */}
       </Slider>
-      <div className="teamCarousel-cover"></div>
+      {/* <div className="teamCarousel-cover"></div> */}
       <div className="teamCarousal-progress">
         <ProgressBar
           completed={percentage(currentMember)}
-          width="75%"
+          width="100%"
           height="6px"
           baseBgColor="rgba(218, 164, 154, 0.3)"
           bgcolor="#C25A3F"

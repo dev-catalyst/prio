@@ -8,7 +8,7 @@ import Values from "./Values"
 
 import "./style.scss"
 
-function ellipse() {
+function Ellipse() {
   return (
     <div id="section2" className="ellipse">
       <div className="container">
@@ -23,4 +23,4 @@ function ellipse() {
   )
 }
 
-export default ellipse
+export default Ellipse

@@ -4,7 +4,7 @@ import SecondaryFooter from "./secondaryFooter"
 import TopBorderGradient from "./topBorderGradient"
 import "./style.scss"
 
-function footer() {
+function Footer() {
   return (
     <div className="footer">
       <TopBorderGradient />
@@ -14,4 +14,4 @@ function footer() {
   )
 }
 
-export default footer
+export default Footer

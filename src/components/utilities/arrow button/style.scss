@@ -3,13 +3,18 @@
 #arrowButton {
   // background-color: $primary-color;
   // color: #fff;
-  min-width: 334px;
+  width: 334px;
   height: 75px;
   border-radius: 700px;
   font-size: 16px;
   text-transform: capitalize;
   box-shadow: none;
   // padding-right: 80px;
+  @media only screen and (max-width: 575.98px) {
+    padding-right: 40px !important;
+    width: 250px;
+    height: 55px;
+  }
 }
 
 .arrowButton {
@@ -21,10 +26,16 @@
     top: 50%;
     transform: translateY(-50%) translateX(-60px);
     transition: all 0.6s ease-in-out;
+    @media only screen and (max-width: 575.98px) {
+      transform: translateY(-50%) translateX(-40px);
+    }
   }
   &:hover {
     .arrowButton-union {
       transform: translateY(-50%) translateX(-45px);
+      @media only screen and (max-width: 575.98px) {
+        transform: translateY(-50%) translateX(-40px);
+      }
     }
   }
 }

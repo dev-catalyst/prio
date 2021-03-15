@@ -20,14 +20,29 @@
   left: 0;
   right: 0;
   @include flexCenter(space-between, center, row);
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  &-logo {
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  button {
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
 
   &-links {
     width: 100%;
     color: white;
     list-style: none;
     padding: 0 30px;
-    @include flexCenter(space-evenly, center, row);
-    :last-child {
+    @include flexCenter(flex-start, center, row);
+    :nth-last-child(2) {
       margin-left: auto;
     }
     :nth-child(1),
@@ -47,5 +62,101 @@
       opacity: 0.7;
       color: $secondary-color;
     }
+  }
+
+  &-close {
+    display: none;
+  }
+}
+
+.header.active {
+  @media only screen and (max-width: 1200px) {
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: 100;
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    .header-links {
+      @media only screen and (max-width: 1200px) {
+        height: 100%;
+        color: $secondary-color;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      :nth-last-child(2) {
+        margin-left: 0;
+      }
+
+      .header-link {
+        padding: 20px 0;
+      }
+    }
+
+    .header-close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      display: block;
+    }
+  }
+}
+
+.header-small {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  max-width: 1440px;
+  height: 100px;
+  padding: 0 80px;
+  margin: auto;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  @include flexCenter(space-between, center, row);
+  display: none;
+  @media only screen and (max-width: 1200px) {
+    display: flex;
+  }
+  @media only screen and (max-width: 767.98px) {
+    padding: 0 40px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    padding: 0 20px;
+  }
+
+  &-menu {
+    cursor: pointer;
+  }
+
+  &-logo {
+    width: 100px;
+    padding-left: 20px;
+  }
+
+  &-link {
+    color: #fff;
+    font-size: 17px;
+    font-family: "Euclid";
+    cursor: pointer;
+  }
+}
+
+.header-small.active {
+  .header-small-menu {
+    display: none;
+  }
+
+  .header-small-logo {
+    display: none;
+  }
+
+  .header-small-link {
+    display: none;
   }
 }

@@ -4,13 +4,21 @@
   // width: 100%;
   // @include flexCenter(space-between, center, row);
   transform: translateX(50px);
-  max-width: 600px;
-  // width: 45%;
+  width: 600px;
+  max-width: 40%;
   font-family: "Euclid";
+  @media only screen and (max-width: 991.98px) {
+    max-width: 90%;
+    transform: translateX(0);
+    margin-bottom: 100px;
+  }
 
   &-info {
     @include flexCenter(center, flex-start, column);
     margin-left: 40px;
+    @media only screen and (max-width: 991.98px) {
+      margin-left: 0;
+    }
 
     &-subtitle {
       font-size: 19px;
@@ -20,6 +28,9 @@
       font-weight: 400;
       text-transform: uppercase;
       padding-left: 20px;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 16px;
+      }
     }
     &-title {
       color: $secondary-color;
@@ -28,6 +39,10 @@
       line-height: 62px;
       margin: 30px 0;
       padding-left: 20px;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 25px;
+        line-height: 39.5px;
+      }
     }
     &-description {
       font-size: 19px;
@@ -37,6 +52,9 @@
       line-height: 34px;
       margin-bottom: 60px;
       padding-left: 20px;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 16px;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@ import TeamCarousel from "./teamCarousel"
 
 import "./style.scss"
 
-function team() {
+function Team() {
   return (
     <div className="team">
       <div className="container">
@@ -15,4 +15,4 @@ function team() {
   )
 }
 
-export default team
+export default Team

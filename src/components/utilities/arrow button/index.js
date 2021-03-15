@@ -3,7 +3,7 @@ import { Button } from "@react-md/button"
 
 import "./style.scss"
 
-function arrowButton(props) {
+function ArrowButton(props) {
   return (
     <div className="arrowButton">
       <Button
@@ -22,4 +22,4 @@ function arrowButton(props) {
   )
 }
 
-export default arrowButton
+export default ArrowButton

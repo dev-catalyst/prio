@@ -1,8 +1,8 @@
 import React from "react"
 import "./style.scss"
 
-function gradient() {
+function Gradient() {
   return <div className="gradientBorder"></div>
 }
 
-export default gradient
+export default Gradient

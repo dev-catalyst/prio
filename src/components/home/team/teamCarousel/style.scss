@@ -1,9 +1,17 @@
 .teamCarousel {
-  width: 800px;
-  transform: translateX(200px);
+  // width: 800px;
+  // transform: translateX(200px);
   overflow: hidden;
   position: relative;
   padding-bottom: 100px;
+  width: 800px;
+  max-width: 55%;
+  @media only screen and (max-width: 991.98px) {
+    max-width: 90%;
+  }
+  @media only screen and (max-width: 575.98px) {
+    max-width: 100%;
+  }
 
   .slick-list {
     padding-left: 20px;
@@ -20,12 +28,39 @@
 
   &-slider-card {
     outline: none;
+    width: 90% !important;
+    margin: 0 5%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.team-right-arrow {
+  @media only screen and (max-width: 991.98px) {
+    transform: translateX(-75%) translateY(200%) !important;
+  }
+  @media only screen and (max-width: 575.98px) {
+    transform: translateX(-50%) translateY(200%) !important;
+  }
+}
+
+.team-left-arrow {
+  @media only screen and (max-width: 991.98px) {
+    transform: translateX(-25%) translateY(200%) !important;
+  }
+  @media only screen and (max-width: 575.98px) {
+    transform: translateX(0%) translateY(200%) !important;
   }
 }
 
 .teamCarousal-progress {
   padding-top: 85px;
-  padding-left: 160px;
-  //   height: 150px;
-  //   background-color: red;
+  padding-left: 280px;
+  @media only screen and (max-width: 991.98px) {
+    padding-left: 180px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    padding-left: 200px;
+  }
 }

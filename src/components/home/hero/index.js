@@ -2,12 +2,13 @@ import React from "react"
 import Heading from "../../utilities/heading"
 import ArrowButton from "../../utilities/arrow button"
 // import face from "../../../assets/images/home/image 206.png"
-import faceVideo from "../../../assets/images/1046787226-hd.mp4"
+import faceVideo1 from "../../../assets/images/1046787226-hd.mp4"
+import faceVideo2 from "../../../assets/images/1046787226-hd.webm"
 import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
 
-function index() {
+function Hero() {
   const smothScroll = () => {
     const element = document.getElementById("section2")
     if (element) {
@@ -21,14 +22,12 @@ function index() {
   return (
     <div className="hero">
       {/* <img className="hero-video" src={face} alt="hero face" /> */}
-      <video className="hero-video" src={faceVideo} autoPlay muted loop />
+      <video className="hero-video" src={faceVideo2} autoPlay muted loop />
       <div className="container">
         <div className="hero-content">
-          <Heading
-            text="EINE ZUKUNFT IN DER DEINE GESUNDHEIT PRIO ONE IST"
-            color="#fff"
-            size="45px"
-          />
+          <h1 className="hero-content-header">
+            EINE ZUKUNFT IN DER DEINE GESUNDHEIT PRIO ONE IST
+          </h1>
           <ArrowButton
             text="Hier geht’s zur Pille"
             paddingRight="80px"
@@ -48,4 +47,4 @@ function index() {
   )
 }
 
-export default index
+export default Hero

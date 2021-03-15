@@ -6,20 +6,85 @@
   overflow: hidden;
   background-color: #fff;
   font-family: "Euclid";
+  position: relative;
+  padding-bottom: 250px;
+  @media only screen and (max-width: 991.98px) {
+    padding-top: 0;
+  }
   &-info {
     @include flexCenter(center, center, row);
+    @media only screen and (max-width: 991.98px) {
+      flex-direction: column-reverse;
+    }
+    &-imageContainer {
+      position: relative;
+      @media only screen and (max-width: 767.98px) {
+        max-width: 80%;
+        align-self: flex-end;
+        z-index: 2;
+      }
+      &-image {
+        transition: all 0.3s ease-in;
+        @media only screen and (max-width: 767.98px) {
+          width: 100%;
+        }
+        &:hover {
+          transform: scale(1.015);
+        }
+      }
 
-    img {
-      transition: all 0.3s ease-in;
-      &:hover {
-        transform: scale(1.015);
+      &-graph {
+        display: none;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: -1;
+        @media only screen and (max-width: 767.98px) {
+          display: block;
+        }
+        &-container {
+          position: relative;
+          transform: translateY(-75%) translateX(-10px);
+          &-image2 {
+            position: absolute;
+            right: -75px;
+            // transform: translateY(-100px);
+          }
+        }
       }
     }
 
     &-container {
-      width: 500px;
+      width: 40%;
+      max-width: 500px;
+      min-width: 400px;
       margin-left: 80px;
       transform: translateY(20px);
+
+      @media only screen and (max-width: 991.98px) {
+        width: 70%;
+        margin-left: 0;
+        margin-bottom: 100px;
+        // max-width: 80%;
+      }
+      @media only screen and (max-width: 575.98px) {
+        width: 90%;
+        min-width: 200px;
+      }
+
+      &-heading {
+        text-transform: uppercase;
+        color: $secondary-color;
+        font-size: 42px;
+        font-weight: 400;
+        font-family: "Euclid";
+        max-width: 667px;
+        line-height: 68px;
+        @media only screen and (max-width: 575.98px) {
+          font-size: 25px;
+        }
+      }
 
       &-description {
         font-size: 19px;
@@ -27,24 +92,50 @@
         color: rgba(28, 43, 73, 0.7);
         margin-bottom: 50px;
         font-weight: 400;
+        @media only screen and (max-width: 575.98px) {
+          font-size: 16px;
+        }
       }
     }
   }
 
   &-graph {
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+
     @include flexCenter(center, flex-end, row);
-    transform: translateY(-100px);
+    transform: translateY(calc(-250px - 40%));
+
+    @media only screen and (max-width: 991.98px) {
+      justify-content: flex-start;
+      left: 10px;
+      width: 200%;
+    }
+    @media only screen and (max-width: 375px) {
+      transform: translateY(calc(-200px - 30%));
+    }
+
     &-doctors {
       z-index: 10;
       transition: all 0.3s ease-in;
       &:hover {
         transform: scale(1.015);
       }
+
+      @media only screen and (max-width: 991.98px) {
+        max-width: 30%;
+      }
     }
 
     &-container {
       position: relative;
-      transform: translateY(-50px);
+      transform: translateY(-75%);
+
+      @media only screen and (max-width: 375px) {
+        transform: translateY(-50%);
+      }
+
       &-image2 {
         position: absolute;
         right: -75px;

@@ -7,7 +7,7 @@ import arzten from "../../../../assets/images/layout/footer/Group 591.svg"
 
 import "./style.scss"
 
-function primaryFooter() {
+function PrimaryFooter() {
   return (
     <div className="primaryFooter">
       <div className="container">
@@ -19,7 +19,7 @@ function primaryFooter() {
             <li className="primaryFooter-section-link">Careers</li>
           </ul>
         </div>
-        <div className="primaryFooter-section">
+        <div className="primaryFooter-section social-media-section">
           <h3 className="primaryFooter-section-title">
             Find us on social media
           </h3>
@@ -72,4 +72,4 @@ function primaryFooter() {
   )
 }
 
-export default primaryFooter
+export default PrimaryFooter
