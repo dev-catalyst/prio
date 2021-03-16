@@ -1,5 +1,4 @@
 import React from "react"
-import Heading from "../../utilities/heading"
 import ArrowButton from "../../utilities/arrow button"
 import facevideoMp4 from "../../../assets/video/video.mp4"
 import faceVideoImg from "../../../assets/video/video-img.png"

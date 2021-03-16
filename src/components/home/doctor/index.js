@@ -1,5 +1,4 @@
 import React from "react"
-import Heading from "../../utilities/heading"
 import ArrowButton from "../../utilities/arrow button"
 import doctor from "../../../assets/images/home/image 211.png"
 import doctors from "../../../assets/images/home/image 200.png"

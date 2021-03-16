@@ -2,71 +2,15 @@ import React from "react"
 import Slider from "react-slick"
 import ProgressBar from "@ramonak/react-progress-bar"
 
-import leftArrow from "../../../../assets/images/home/left-arrow.svg"
-import rightArrow from "../../../../assets/images/home/right-arrow.svg"
+import RightArrow from "./rightArrow"
+import LeftArrow from "./leftArrow"
 
 import member1 from "../../../../assets/images/home/member1.png"
-import member2 from "../../../../assets/images/home/member2.png"
+// import member2 from "../../../../assets/images/home/member2.png"
 
 import "./style.scss"
 
-const RightArrow = ({ className, style, onClick }) => (
-  <div
-    className="team-right-arrow"
-    style={{
-      ...style,
-      position: "absolute",
-      bottom: "0",
-      transform: "translateX(100%) translateY(200%)",
-      left: "135px",
-      width: "60px",
-      height: "60px",
-      cursor: "pointer",
-      backgroundColor: "#transparent",
-      zIndex: "10",
-      borderRadius: "100%",
-      border: "2px solid #C25A3F",
-    }}
-    onClick={onClick}
-  >
-    <img
-      src={rightArrow}
-      style={{
-        transform: "translateX(40%) translateY(35%)",
-      }}
-    />
-  </div>
-)
-
-const LeftArrow = ({ className, style, onClick }) => (
-  <div
-    className="team-left-arrow"
-    style={{
-      ...style,
-      position: "absolute",
-      bottom: "0",
-      transform: "translateX(150%) translateY(200%)",
-      left: "30px",
-      width: "60px",
-      height: "60px",
-      cursor: "pointer",
-      backgroundColor: "transparent",
-      zIndex: "10",
-      borderRadius: "100%",
-      border: "2px solid #C25A3F",
-    }}
-    onClick={onClick}
-  >
-    <img
-      src={leftArrow}
-      style={{
-        transform: "translateX(35%) translateY(35%)",
-      }}
-    />
-  </div>
-)
-
-//  SETTINGS FOR REACT SLICK CAROUSAL
+//  settings for slick carousel
 var settings = {
   dots: false,
   infinite: false,
@@ -87,23 +31,9 @@ var settings = {
   ],
 }
 
-const members = [
-  {
-    image: member1,
-  },
-  {
-    image: member1,
-  },
-  {
-    image: member1,
-  },
-  {
-    image: member1,
-  },
-]
-
+// utility function
 const percentage = num => {
-  const percent = ((num + 2) / members.length) * 100
+  const percent = ((num + 1) / members.length) * 100
   return percent
 }
 
@@ -149,3 +79,19 @@ function TeamCarousel() {
 }
 
 export default TeamCarousel
+
+// data for carousel
+const members = [
+  {
+    image: member1,
+  },
+  {
+    image: member1,
+  },
+  {
+    image: member1,
+  },
+  {
+    image: member1,
+  },
+]
