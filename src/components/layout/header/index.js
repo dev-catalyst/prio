@@ -1,5 +1,6 @@
 import React from "react"
 import prioLogo from "../../../assets/images/layout/header/prio_logo.svg"
+import prioLogoSmall from "../../../assets/images/layout/header/prio_logo_small.svg"
 import hamburger from "../../../assets/images/home/hamburger.svg"
 import cross from "../../../assets/images/home/cross.svg"
 import Button from "./button"
@@ -42,7 +43,7 @@ function Header() {
         <h1>
           <img
             className="header-small-logo"
-            src={prioLogo}
+            src={prioLogoSmall}
             alt="prio one"
           ></img>
         </h1>

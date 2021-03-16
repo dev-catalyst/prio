@@ -10,13 +10,17 @@ function ArrowButton(props) {
         id="arrowButton"
         themeType="contained"
         style={{
-          paddingRight: props.paddingRight,
-          color: props.color,
           backgroundColor: props.backgroundColor,
+        }}
+      ></Button>
+      <span
+        className="arrowButton-text"
+        style={{
+          color: props.color,
         }}
       >
         {props.text}
-      </Button>
+      </span>
       <img className="arrowButton-union" src={props.union} alt="arrow button" />
     </div>
   )

@@ -113,7 +113,7 @@
       width: 200%;
     }
     @media only screen and (max-width: 375px) {
-      transform: translateY(calc(-200px - 30%));
+      transform: translateY(calc(-250px - 30%));
     }
 
     &-doctors {
@@ -135,11 +135,42 @@
       @media only screen and (max-width: 375px) {
         transform: translateY(-50%);
       }
-
+      &-image0 {
+        opacity: 0;
+      }
+      &-image1 {
+        position: absolute;
+        left: 0;
+        // transform: translateY(-100px);
+        @media only screen and (max-width: 991.98px) {
+          left: -140px;
+        }
+        @media only screen and (max-width: 767.98px) {
+          left: -180px;
+        }
+        @media only screen and (max-width: 575.98px) {
+          left: -350px;
+        }
+        @media only screen and (max-width: 375.98px) {
+          left: -400px;
+        }
+      }
       &-image2 {
         position: absolute;
-        right: -75px;
+        left: 0;
         // transform: translateY(-100px);
+        @media only screen and (max-width: 991.98px) {
+          left: -140px;
+        }
+        @media only screen and (max-width: 767.98px) {
+          left: -180px;
+        }
+        @media only screen and (max-width: 575.98px) {
+          left: -350px;
+        }
+        @media only screen and (max-width: 375.98px) {
+          left: -400px;
+        }
       }
     }
   }

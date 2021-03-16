@@ -2,7 +2,7 @@ import React from "react"
 import Heading from "../../utilities/heading"
 import ArrowButton from "../../utilities/arrow button"
 import facevideoMp4 from "../../../assets/video/video.mp4"
-import faceVideoImg from "../../../assets/video/video-img.jpg"
+import faceVideoImg from "../../../assets/video/video-img.png"
 import union from "../../../assets/images/utilities/Union.svg"
 
 import "./style.scss"
@@ -20,7 +20,15 @@ function Hero() {
   }
   return (
     <div className="hero">
-      <video className="hero-video" autoPlay muted loop  poster={faceVideoImg}> 
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={faceVideoImg}
+        crossOrigin="anonymous"
+      >
         <source src={facevideoMp4} type="video/mp4" />
       </video>
       <div className="container">

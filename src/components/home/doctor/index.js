@@ -57,6 +57,11 @@ function Doctor() {
             <img className="doctor-graph-doctors" src={doctors} alt="doctor" />
             <div className="doctor-graph-container">
               <img
+                className="doctor-graph-container-image0"
+                src={graph1}
+                alt="graph"
+              />
+              <img
                 className="doctor-graph-container-image1"
                 src={graph1}
                 alt="graph"

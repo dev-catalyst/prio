@@ -79,15 +79,9 @@ var settings = {
   prevArrow: <LeftArrow />,
   responsive: [
     {
-      breakpoint: 1170,
+      breakpoint: 575,
       settings: {
-        // centerMode: false,
-      },
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        // centerMode: true,
+        centerPadding: "10%",
       },
     },
   ],

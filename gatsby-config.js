@@ -11,5 +11,21 @@ module.exports = {
     description: "EINE ZUKUNFT IN DER DEINE GESUNDHEIT PRIO ONE IST",
   },
 
-  plugins: [`gatsby-plugin-sass`, `gatsby-plugin-react-helmet`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          runtimeCaching: [
+            {
+              urlPattern: /.*\.mp4/,
+              handler: `NetworkOnly`,
+            },
+          ],
+        },
+      },
+    },
+  ],
 }
