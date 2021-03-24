@@ -1,0 +1,231 @@
+.forDoctors-work {
+  padding: 134px 0;
+  @media screen and (max-width: 891px) {
+    padding: 80px 0;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 50px 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &-row-col-content {
+    margin-top: -12px;
+
+    & > h3 {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 100px;
+    @media screen and (max-width: 891px) {
+      margin-bottom: 0px;
+    }
+  }
+
+  p {
+    opacity: 0.7;
+  }
+
+  &-rowWrapper {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    h1 {
+      margin: 0;
+      line-height: 32px;
+      padding: 0 41px;
+      @media screen and (max-width: 891px) {
+        padding: 0;
+        margin: 15px 0 25px;
+      }
+    }
+  }
+
+  &-row1,
+  &-row2,
+  &-row3 {
+    .forDoctors-work-row-col7 {
+      display: flex;
+      -ms-flex: 0 0 58.333333%;
+      flex: 0 0 58.333333%;
+      max-width: 58.333333%;
+      @media screen and (max-width: 891px) {
+        display: block;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      & > img {
+        width: 55px;
+        height: 55px;
+        @media screen and (max-width: 891px) {
+          left: -62px;
+          top: 50px;
+        }
+        @media screen and (max-width: 891px) {
+          left: 46px;
+          width: 45px;
+          height: 45px;
+          display: inline-block;
+          position: relative;
+        }
+      }
+    }
+    .forDoctors-work-row-col5 {
+      -ms-flex: 0 0 41.666667%;
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+      @media screen and (max-width: 891px) {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    & > img {
+      position: absolute;
+      height: 100%;
+      z-index: -1;
+      left: 23%;
+      top: 136px;
+      @media screen and (max-width: 891px) {
+        left: -62px !important;
+        top: 50px !important;
+      }
+    }
+  }
+
+  &-row1 {
+    & > img {
+      position: absolute;
+      height: 100%;
+      z-index: -1;
+      left: 27px;
+      top: 85px;
+    }
+    .forDoctors-work-row-col5 {
+      & > img {
+        width: 100%;
+        padding-left: 90px;
+      }
+      @media screen and (max-width: 891px) {
+        display: none;
+      }
+    }
+  }
+
+  &-row2 {
+    justify-content: center;
+    padding-top: 55px;
+    margin-left: 55px;
+    & > img {
+      left: 23% !important;
+      top: 136px !important;
+      @media screen and (max-width: 891px) {
+        left: -62px !important;
+        top: 50px !important;
+      }
+    }
+    @media screen and (max-width: 891px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 891px) {
+      padding-top: 50px;
+    }
+  }
+
+  &-row3 {
+    padding-top: 108px;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 576px) {
+      padding-right: 0px;
+    }
+
+    & > img {
+      display: none;
+    }
+
+    .forDoctors-work-row-col-content {
+      position: relative;
+      & > img {
+        display: none;
+        @media screen and (max-width: 891px) {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 160%;
+          transform: translate(-30%, -25%);
+        }
+        @media screen and (max-width: 767px) {
+          transform: translate(-25%, -25%);
+        }
+      }
+    }
+    .forDoctors-work-row-col5 {
+      padding-top: 125px;
+      & > img {
+        width: 100%;
+      }
+      @media screen and (max-width: 891px) {
+        left: 0;
+        order: 2;
+        & > img {
+          position: relative;
+          max-width: 100vw;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          width: 100vw !important;
+          padding-top: 28px;
+        }
+      }
+    }
+    .forDoctors-work-row-col7 {
+      -ms-flex: 0 0 53.333333%;
+      flex: 0 0 53.333333%;
+      max-width: 53.333333%;
+      @media screen and (max-width: 891px) {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .container {
+    width: 100% !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media only screen and (max-width: 575.98px) {
+      padding-right: 38px !important;
+      padding-left: 38px !important;
+    }
+    @media only screen and (min-width: 576px) {
+      max-width: 540px !important;
+    }
+    @media only screen and (min-width: 768px) {
+      max-width: 720px !important;
+    }
+    @media only screen and (min-width: 992px) {
+      max-width: 960px !important;
+    }
+    @media only screen and (min-width: 1200px) {
+      max-width: 1140px !important;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../styles/utilities/utilities";
+
+.products-yourChoice {
+  padding: 150px 0;
+  background: #fff;
+  overflow: hidden;
+  @media only screen and (max-width: 991.98px) {
+  }
+  @media only screen and (max-width: 575.98px) {
+    padding: 135px 0;
+  }
+  &-content {
+    position: relative;
+    padding: 0 20px;
+    @include flexCenter(center, center, column);
+    text-align: center;
+    overflow: visible;
+    z-index: 1;
+    &-header {
+      max-width: 678px;
+      color: $secondary-color;
+      margin-bottom: 60px;
+      @media only screen and (max-width: 991.98px) {
+      }
+      @media only screen and (max-width: 575.98px) {
+        max-width: 280px;
+        margin-bottom: 40px;
+      }
+    }
+    &-image {
+      position: absolute;
+      height: 474px;
+      width: 100%;
+      border-radius: 100%;
+      min-width: 1440px;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-20%);
+
+      @media only screen and (max-width: 575.98px) {
+        height: 350px;
+        transform: translateX(-46%) translateY(-10%);
+      }
+    }
+  }
+}

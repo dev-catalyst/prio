@@ -1,0 +1,58 @@
+@import "../../../styles/utilities/utilities";
+
+#arrowButton {
+  // background-color: $primary-color;
+  // color: #fff;
+  width: 334px;
+  height: 75px;
+  border-radius: 700px;
+  box-shadow: none;
+  // padding-right: 80px;
+  @media only screen and (max-width: 575.98px) {
+    width: 250px;
+    height: 55px;
+  }
+}
+
+.arrowButton {
+  width: 334px;
+  height: 75px;
+  position: relative;
+  @media only screen and (max-width: 575.98px) {
+    width: 250px;
+    height: 55px;
+  }
+  &-union {
+    position: absolute;
+    width: 25px;
+    height: 6px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(-35px);
+    transition: all 0.6s ease-in-out;
+    @media only screen and (max-width: 575.98px) {
+      transform: translateY(-50%) translateX(-30px);
+    }
+  }
+  &-text {
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: "Euclid";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(45px);
+    @media only screen and (max-width: 575.98px) {
+      font-size: 15px;
+      transform: translateY(-50%) translateX(35px);
+    }
+  }
+  &:hover {
+    .arrowButton-union {
+      transform: translateY(-50%) translateX(-25px);
+      @media only screen and (max-width: 575.98px) {
+        transform: translateY(-50%) translateX(-20px);
+      }
+    }
+  }
+}

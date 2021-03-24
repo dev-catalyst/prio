@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &-video {
+    width: 130%;
+    height: 100vh;
+    min-height: 900px;
+    object-fit: cover;
+    object-position: right top;
+    margin-bottom: -6px;
+    @media only screen and (max-width: 991.98px) {
+      object-position: center top;
+    }
+  }
+  & .container {
+    position: absolute;
+    padding-top: 120px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    left: 0;
+    right: 0;
+  }
+  &-content {
+    padding-left: 120px;
+    margin-bottom: 50px;
+    width: 100%;
+    &-header {
+      color: #fff;
+      size: 45px;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: "Euclid";
+      max-width: 60%;
+      width: 587px;
+      line-height: 68px;
+      margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 991.98px) {
+      padding-left: 80px;
+      header {
+        margin-right: 0;
+        margin-bottom: 50px;
+      }
+    }
+    @media only screen and (max-width: 767.98px) {
+      padding-left: 60px;
+      &-header {
+        margin-bottom: 40px;
+      }
+    }
+    @media only screen and (max-width: 575.98px) {
+      padding: 20px;
+      &-header {
+        max-width: 100%;
+        margin-bottom: 30px;
+        line-height: 39.5px;
+      }
+    }
+    @media only screen and (max-width: 375.98px) {
+      padding: 0;
+    }
+  }
+}
+
+@keyframes ani-mouse {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+.scroll-btn {
+  display: block;
+  position: absolute;
+  left: 120px;
+  bottom: 50px;
+  text-align: center;
+  color: #fff;
+  line-height: 18px;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  @media only screen and (max-width: 991.98px) {
+    display: none;
+  }
+}
+
+.scroll-btn .mouse {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 55px;
+  margin: 0 auto 20px;
+  border: 3px solid white;
+  border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: white;
+  border-radius: 50%;
+  animation: ani-mouse 2.5s linear infinite;
+}

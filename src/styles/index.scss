@@ -1,0 +1,106 @@
+@import "~react-md/dist/react-md";
+@include react-md-utils;
+@import "./utilities/utilities";
+
+@font-face {
+  font-family: "Euclid";
+  src: url("../assets/../assets/fonts/Euclid\ Circular\ B\ pack/web\ files/EuclidCircularB-Regular-WebS.ttf");
+}
+
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+  background-color: #fff;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Euclid", serif;
+  font-weight: 400;
+  color: $secondary-color;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  @media only screen and (max-width: 1199.98px) {
+    font-size: 42px;
+  }
+  @media only screen and (max-width: 991.98px) {
+    font-size: 38px;
+    letter-spacing: -0.035em;
+  }
+  @media only screen and (max-width: 575.98px) {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  @media only screen and (max-width: 1199.98px) {
+    font-size: 36px;
+  }
+  @media only screen and (max-width: 991.98px) {
+    font-size: 32px;
+    letter-spacing: -0.035em;
+  }
+  @media only screen and (max-width: 575.98px) {
+    font-size: 25px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  @media only screen and (max-width: 991.98px) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  @media only screen and (max-width: 1199.98px) {
+    font-size: 26px;
+  }
+  @media only screen and (max-width: 1199.98px) {
+    letter-spacing: -0.035em;
+  }
+  @media only screen and (max-width: 575.98px) {
+    font-size: 22px;
+  }
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.79;
+  letter-spacing: -0.015em;
+  @media only screen and (max-width: 1199.98px) {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 991.98px) {
+    font-size: 17px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,142 @@
+.forDoctors-carousel {
+  background-image: url("../../../assets/images/forDoctors/carousel\ bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 140px 0;
+
+  @media only screen and (max-width: 991px) {
+    padding: 80px 0 120px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 50px 0 80px;
+  }
+
+  & > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media only screen and (max-width: 768px) {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 70%;
+    }
+  }
+
+  .container {
+    width: 100% !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media only screen and (max-width: 575.98px) {
+      padding-right: 38px !important;
+      padding-left: 38px !important;
+    }
+
+    .forDoctors-carousel-slider {
+      .team-left-arrow {
+        bottom: 24% !important;
+        left: 50% !important;
+        transform: translateX(120%) translateY(200%) !important;
+        @media only screen and (max-width: 1200px) {
+          bottom: 22% !important;
+        }
+        @media only screen and (max-width: 991px) {
+          bottom: 20% !important;
+          left: calc(50% - 40px) !important;
+        }
+        @media only screen and (max-width: 768px) {
+          display: none !important;
+        }
+      }
+      .team-right-arrow {
+        bottom: 24% !important;
+        left: 50% !important;
+        transform: translateX(calc(120% + 80px)) translateY(200%) !important;
+        @media only screen and (max-width: 1200px) {
+          bottom: 22% !important;
+        }
+        @media only screen and (max-width: 991px) {
+          bottom: 20% !important;
+          left: calc(50% - 40px) !important;
+        }
+        @media only screen and (max-width: 768px) {
+          display: none !important;
+        }
+      }
+    }
+
+    .forDoctors-carousel-slider-content {
+      display: flex !important;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      outline: none;
+      & > img {
+        max-width: 45%;
+      }
+      & > div {
+        max-width: 50%;
+        padding-left: 100px;
+        & > p:nth-of-type(2) {
+          opacity: 0.7;
+        }
+      }
+      @media only screen and (max-width: 991px) {
+        & > div {
+          padding-left: 50px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        flex-direction: column;
+        & > img {
+          max-width: 80%;
+          margin-bottom: 55px;
+        }
+        & > div {
+          max-width: 80%;
+          padding-left: 0px;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        flex-direction: column;
+        & > img {
+          max-width: 100%;
+        }
+        & > div {
+          max-width: 100%;
+          padding-left: 0px;
+        }
+      }
+    }
+
+    & > div:nth-of-type(2) {
+      display: none !important;
+      @media only screen and (max-width: 768px) {
+        display: block !important;
+        margin: auto;
+        margin-top: 50px !important;
+        width: 80%;
+      }
+      @media only screen and (max-width: 575px) {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 576px) {
+      max-width: 540px !important;
+    }
+    @media only screen and (min-width: 768px) {
+      max-width: 720px !important;
+    }
+    @media only screen and (min-width: 992px) {
+      max-width: 960px !important;
+    }
+    @media only screen and (min-width: 1200px) {
+      max-width: 1140px !important;
+    }
+  }
+}

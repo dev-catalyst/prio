@@ -1,0 +1,17 @@
+@import "../../../styles/utilities/utilities";
+
+.ellipse {
+  background-color: $secondary-color;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  //   .ellipse-image {
+  //     position: absolute;
+  //     z-index: -1;
+  //     top: 160px;
+  //     right: 0;
+  //   }
+}

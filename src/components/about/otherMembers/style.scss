@@ -1,0 +1,57 @@
+.other-members {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 193px;
+  z-index: -1;
+
+  @media screen and (max-width: 766.98px) {
+    margin-bottom: 100px;
+  }
+
+  .container {
+    padding: 0;
+
+    .other-members-content {
+      padding-left: 100px;
+
+      @media screen and (max-width: 1199.98px) {
+        padding-left: 50px;
+      }
+
+      h4 {
+        margin: 0;
+        max-width: 496px;
+        z-index: -1;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: 766.98px) {
+          margin-bottom: unset;
+        }
+
+        @media screen and (max-width: 575.98px) {
+          font-size: 25px !important;
+          max-width: 250px;
+        }
+      }
+    }
+
+    .member-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @media screen and (max-width: 766.98px) {
+        display: none;
+      }
+    }
+
+    .others-carousel {
+      margin-left: 26px;
+      padding-top: 48px;
+
+      @media screen and (max-width: 766.98px) {
+        position: relative;
+      }
+    }
+  }
+}

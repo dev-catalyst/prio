@@ -1,0 +1,17 @@
+@import "../../../styles/utilities/utilities";
+
+.team {
+  padding-top: 100px;
+  overflow: hidden;
+  background-color: #fff;
+  .container {
+    @include flexCenter(space-between, flex-start, row);
+    @media only screen and (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media only screen and (max-width: 575.98px) {
+      padding: 0;
+    }
+  }
+}

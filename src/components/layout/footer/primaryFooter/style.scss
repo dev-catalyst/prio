@@ -1,0 +1,104 @@
+@import "../../../../styles/utilities/utilities";
+
+.primaryFooter {
+  width: 100%;
+  background-color: #f8fafb;
+  padding: 50px;
+  font-family: "Euclid";
+  @media only screen and (max-width: 575.98px) {
+    padding: 50px 10px;
+  }
+  @media only screen and (max-width: 375.98px) {
+    padding: 50px 0px;
+  }
+
+  .container {
+    @include flexCenter(space-evenly, flex-start, row);
+    margin: auto;
+
+    @media only screen and (max-width: 991.98px) {
+      .social-media-section {
+        order: -1;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      flex-wrap: wrap;
+    }
+  }
+
+  &-section {
+    @include flexCenter(center, center, column);
+    text-align: center;
+    min-width: 100px;
+
+    &-title {
+      line-height: 32px;
+      font-size: 25px;
+      font-weight: normal;
+      color: $secondary-color;
+      margin: 25px 0 35px;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 20px;
+        max-width: 90%;
+      }
+    }
+    &-links {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+    }
+    &-link {
+      padding-bottom: 40px;
+      color: rgba(28, 43, 73, 0.7);
+      font-size: 17px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover {
+        color: $primary-color;
+      }
+      @media only screen and (max-width: 575.98px) {
+        font-size: 16px;
+        letter-spacing: -1.5%;
+        width: 115px;
+      }
+    }
+    &-logos {
+      margin-top: 1em;
+      margin-bottom: 40px;
+    }
+    &-logo {
+      height: 48px;
+      width: 48px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &-prioLogo {
+      margin-bottom: 60px;
+      @media only screen and (max-width: 991.98px) {
+        margin-bottom: 20px;
+      }
+    }
+    &-logosWide {
+      @include flexCenter(center, center, row);
+      margin: 20px 0;
+      @media only screen and (max-width: 575.98px) {
+        flex-direction: column;
+      }
+    }
+    &-logoWide {
+      margin: 0 40px;
+      @media only screen and (max-width: 767.98px) {
+        margin: 0 20px;
+      }
+      @media only screen and (max-width: 575.98px) {
+        margin: 15px 0;
+        max-width: 80%;
+      }
+    }
+  }
+}

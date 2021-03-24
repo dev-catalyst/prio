@@ -1,0 +1,109 @@
+@import "../../../styles/utilities/utilities";
+
+.products-app {
+  background-image: url("../../../assets/images/product/reds.svg");
+  background-size: 100% auto;
+  background-color: #fff;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @media only screen and (max-width: 991.98px) {
+    background-image: none;
+  }
+
+  &::after {
+    content: "";
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    transform: translateY(-10px);
+    background-color: #fff;
+  }
+
+  .container {
+    max-width: 2000px;
+    padding: 0;
+  }
+
+  &-content {
+    width: 86%;
+    margin-left: auto;
+    position: relative;
+
+    & > img {
+      width: 100%;
+      @media only screen and (max-width: 991.98px) {
+        width: 160%;
+        transform: translateX(-13%);
+      }
+    }
+
+    & > div {
+      position: absolute;
+      max-width: 550px;
+      width: 50%;
+      max-height: 780px;
+      height: auto;
+      top: 50%;
+      left: 0;
+      transform: translateX(-20%) translateY(-50%);
+      background-color: #fff;
+      border-radius: 40px;
+      padding: 180px 69px 90px;
+      & > * {
+        margin-bottom: 34px;
+      }
+      & > p {
+        opacity: 0.7;
+      }
+
+      @media only screen and (max-width: 1359.98px) {
+        padding: 144px 50px 72px;
+        // width: 500px;
+        // height: 710px;
+      }
+      @media only screen and (max-width: 1199.98px) {
+        padding: 115px 40px 57px;
+        // width: 455px;
+        // height: 645px;
+      }
+      @media only screen and (max-width: 991.98px) {
+        padding: 100px 20px;
+        position: relative;
+        transform: translate(0px, 0px);
+        max-width: 100%;
+        width: fit-content;
+        border-radius: 0px;
+        margin: auto;
+        & > * {
+          max-width: 400px;
+        }
+      }
+      @media only screen and (max-width: 575.98px) {
+        margin: 0;
+        padding: 70px 20px;
+        & > * {
+          max-width: 300px;
+        }
+      }
+    }
+    @media only screen and (max-width: 991.98px) {
+      width: 100%;
+      @include flexCenter(center, center, column-reverse);
+    }
+  }
+
+  &-layer {
+    color: red;
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+  }
+}

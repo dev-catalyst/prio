@@ -1,0 +1,108 @@
+@import "../../../styles/utilities/utilities";
+
+.products-plan {
+  background-color: #fffcf6;
+
+  .container {
+    padding: 100px 0 100px 150px;
+    @media only screen and (max-width: 1359.98px) {
+      padding: 100px 0px 100px 50px;
+    }
+    @media only screen and (max-width: 991.98px) {
+      padding: 100px 0 60px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      padding: 50px 0px;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    text-align: right;
+    img {
+      margin-right: 85px;
+    }
+    @media only screen and (max-width: 991.98px) {
+      width: 280px;
+      margin-right: 60px;
+      margin-bottom: 50px;
+      margin-left: auto;
+      img {
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width: 767.98px) {
+      width: 240px;
+      margin-right: 40px;
+      margin-bottom: 40px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      width: 180px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  &-content {
+    @include flexCenter(space-between, flex-start, row);
+    &-information {
+      width: 520px;
+      max-width: 50%;
+      & > p {
+        opacity: 0.7;
+      }
+      & > p,
+      & > h2 {
+        margin-bottom: 34px;
+      }
+      & > p:first-of-type {
+        margin-bottom: 29px;
+      }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+      flex-direction: column;
+      align-items: center;
+
+      &-information {
+        width: auto;
+        max-width: 400px;
+        & > h2 {
+          margin-bottom: 34px;
+          padding-right: 35px;
+        }
+        & > p {
+          margin-bottom: 29px;
+          opacity: 0.7;
+        }
+        & > p:last-of-type {
+          margin-bottom: 55px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+      &-information {
+        max-width: 342px;
+        padding: 0 20px;
+        & > h2 {
+          font-size: 25px;
+          margin-bottom: 24px;
+          padding-right: 20px;
+        }
+        & > p {
+          margin-bottom: 14px;
+        }
+        & > p:last-of-type {
+          margin-bottom: 33px;
+        }
+      }
+    }
+
+    & > div:last-of-type {
+      transform: translateY(80px);
+      @media only screen and (max-width: 575.98px) {
+        transform: translateY(0px);
+      }
+    }
+  }
+}

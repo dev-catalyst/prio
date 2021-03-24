@@ -1,0 +1,89 @@
+@import "../../../styles/utilities/utilities";
+
+.products-safe {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+
+  .container {
+    padding: 0 50px 100px;
+    @include flexCenter(space-evenly, center, row);
+
+    & > img {
+      max-width: 60%;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+      flex-direction: column;
+      & > img {
+        max-width: 70%;
+      }
+    }
+    @media only screen and (max-width: 767.98px) {
+      padding: 0 20px 60px;
+      & > img {
+        max-width: 80%;
+      }
+    }
+    @media only screen and (max-width: 575.98px) {
+      padding: 0 0 100px;
+      & > img {
+        max-width: 95%;
+      }
+    }
+  }
+
+  &-information {
+    width: 515px;
+    max-width: 50%;
+    & > h2 {
+      margin-bottom: 34px;
+      padding-right: 35px;
+    }
+    & > p {
+      margin-bottom: 29px;
+      opacity: 0.7;
+    }
+    & > p:last-of-type {
+      margin-bottom: 55px;
+    }
+    & > .arrowButton {
+      transform: translateX(-20px);
+    }
+
+    @media only screen and (max-width: 991.98px) {
+      margin-top: 40px;
+      max-width: 100%;
+      width: 400px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      width: 300px;
+      & > h2 {
+        margin-bottom: 24px;
+        padding-right: 50px;
+      }
+      & > p {
+        margin-bottom: 14px;
+        opacity: 0.7;
+      }
+      & > p:last-of-type {
+        margin-bottom: 80px;
+      }
+      & > .arrowButton {
+        transform: translateX(0px);
+      }
+    }
+  }
+
+  & > img {
+    position: absolute;
+    bottom: 75px;
+    width: 100%;
+    z-index: -1;
+
+    @media only screen and (max-width: 575.98px) {
+      width: 160%;
+      right: 0;
+    }
+  }
+}

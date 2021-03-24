@@ -1,0 +1,23 @@
+.products-medset {
+  position: relative;
+  background: url("../../../assets/images/product/meds\ blue\ bg.svg");
+  background-size: 100% auto;
+  background-repeat: repeat-x;
+  background-position: top center;
+  z-index: 1;
+  .container {
+    & > img {
+      max-width: 100%;
+      // padding-top: 75px;
+      // margin-left: 50px;
+    }
+  }
+  &-lowerbg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 28%;
+    background-color: #f5dbd2;
+    z-index: -1;
+  }
+}

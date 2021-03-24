@@ -1,0 +1,178 @@
+.trustpilot-section {
+  padding: 100px 0;
+  background: #fff;
+  font-family: "Euclid";
+  @media only screen and (max-width: 575.98px) {
+    padding: 50px 0 20px;
+  }
+  .container {
+    & > h2 {
+      text-align: center;
+      margin: auto;
+    }
+    @media only screen and (max-width: 575.98px) {
+      padding: 0;
+    }
+  }
+}
+.trustpilot-rating {
+  margin: 0 10px;
+  & > * {
+    margin: 4px 0;
+  }
+  text-align: center;
+  p {
+    color: #8c8c8c !important;
+  }
+  a {
+    color: rgb(45, 45, 45);
+  }
+  img:nth-of-type(1) {
+    max-width: 100%;
+  }
+  img:nth-of-type(2) {
+    max-width: 60%;
+  }
+
+  @media only screen and (max-width: 991.98px) {
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
+    a {
+      font-size: 16px;
+    }
+    img:nth-of-type(1) {
+      max-width: 132px;
+    }
+    img:nth-of-type(2) {
+      max-width: 110px;
+    }
+  }
+
+  @media only screen and (max-width: 575.98px) {
+    h3 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 14px;
+    }
+    a {
+      font-size: 14px;
+    }
+    img:nth-of-type(1) {
+      max-width: 120px;
+    }
+    img:nth-of-type(2) {
+      max-width: 100px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+  }
+  @media only screen and (max-width: 575.98px) {
+  }
+}
+.truspilot-row {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-gap: 20px;
+  padding: 50px 0;
+  align-items: center;
+
+  @media only screen and (max-width: 991.98px) {
+    grid-template-columns: none;
+    grid-template-rows: 20% 1fr;
+    grid-gap: 50px;
+  }
+}
+.trustpilot-review-wrap {
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 0 60px;
+
+  @media only screen and (max-width: 991.98px) {
+    padding: 0 40px;
+  }
+
+  @media only screen and (max-width: 575.98px) {
+    padding: 0;
+
+    .trustpilot-right-arrow,
+    .trustpilot-left-arrow {
+      display: none !important;
+    }
+  }
+
+  .trustpilot-right-arrow,
+  .trustpilot-left-arrow {
+    transition: all 0.3s ease-in;
+    &:hover {
+      opacity: 0.9 !important;
+    }
+  }
+}
+.trustpilot-review {
+  font-size: 18px;
+  margin: 0 10px;
+  font-family: "Euclid";
+  @media only screen and (max-width: 991.98px) {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    font-size: 14px;
+    margin: 5px;
+  }
+  &-bg {
+    background: #f8fafb;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    @media only screen and (max-width: 575.98px) {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  & .rating img {
+    margin-right: 5px;
+    display: inline;
+  }
+  h4 {
+    margin: 10px 0px 10px;
+    font-size: 19px;
+    font-weight: 600;
+    @media only screen and (max-width: 991.98px) {
+      font-size: 17px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      font-size: 15px;
+    }
+  }
+  h5 {
+    font-size: 16px;
+    margin: 0;
+    @media only screen and (max-width: 991.98px) {
+      font-size: 15px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      font-size: 14px;
+    }
+  }
+  p {
+    margin: 0;
+    line-height: 1.8;
+    @media only screen and (max-width: 375.98px) {
+      line-height: 1.5;
+    }
+  }
+}
+.user-name-and-rating {
+  padding: 0 20px;
+  small {
+    color: #8c8c8c;
+  }
+  @media only screen and (max-width: 575.98px) {
+    padding: 10px;
+  }
+}

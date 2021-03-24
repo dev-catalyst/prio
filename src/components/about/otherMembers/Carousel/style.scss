@@ -1,0 +1,61 @@
+.others-team-about-Carousel {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  display: none;
+
+  @media screen and (max-width: 766.98px) {
+    display: unset;
+    z-index: -1;
+  }
+
+  .teamCarousal-about-progress {
+    @media screen and (max-width: 766.98px) {
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 380px;
+      width: 100%;
+    }
+    @media only screen and (max-width: 575.98px) {
+      left: 120px;
+    }
+  }
+
+  .slick-list {
+    @media only screen and (max-width: 575.98px) {
+      padding-left: 0px !important;
+    }
+  }
+
+  &-cover {
+    position: absolute;
+    height: 100%;
+    width: 150px;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+  }
+
+  &-slider-card {
+    outline: none;
+    width: 94% !important;
+    margin: 0 14px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  font-size: 16px;
+  color: #1c2b49 70%;
+  margin-bottom: 0;
+}
+
+.name {
+  font-size: 16px;
+  margin-top: 0;
+  color: #1c2b49 90%;
+}
