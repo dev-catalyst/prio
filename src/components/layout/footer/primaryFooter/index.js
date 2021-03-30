@@ -36,14 +36,19 @@ function PrimaryFooter() {
             />
           </div>
           <h1>
-            <img
+            {/* <img
               className="primaryFooter-section-prioLogo"
               src={prioLogo}
               alt="prio one"
-            ></img>
+            /> */}
+            <object
+              className="primaryFooter-section-prioLogo"
+              data={prioLogo}
+            ></object>
           </h1>
           <h3 className="primaryFooter-section-title">
-            Medizinsche Aufsichtsbehörde
+            Medizinsche <br />
+            Aufsichtsbehörde
           </h3>
           <div className="primaryFooter-section-logosWide">
             <img

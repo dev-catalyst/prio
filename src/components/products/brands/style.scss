@@ -21,8 +21,8 @@
   &-information {
     width: 450px;
     max-width: 45%;
-    margin-left: 120px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: 60px;
     & > h2 {
       margin-bottom: 34px;
     }
@@ -101,9 +101,13 @@
       }
     }
     &-information {
-      max-width: 340px;
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0 38px;
       & > h2 {
         margin-bottom: 24px;
+        width: 90%;
       }
       & > p {
         margin-bottom: 14px;

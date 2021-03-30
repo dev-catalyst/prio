@@ -5,9 +5,10 @@
   background: #fff;
   overflow: hidden;
   @media only screen and (max-width: 991.98px) {
+    padding: 135px 0;
   }
   @media only screen and (max-width: 575.98px) {
-    padding: 135px 0;
+    padding: 90px 0;
   }
   &-content {
     position: relative;

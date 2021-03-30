@@ -1,5 +1,6 @@
 import React from "react"
 import line from "../../../assets/images/forDoctors/Vector 1338.svg"
+import linePhone from "../../../assets/images/forDoctors/Vector 1338 phone.png"
 import info from "../../../assets/images/forDoctors/Group 1453.svg"
 import doc1 from "../../../assets/images/forDoctors/image 210.png"
 import doc2 from "../../../assets/images/forDoctors/image 204.png"
@@ -15,6 +16,7 @@ function Work() {
           <img src={line} alt="line" />
           <div className="forDoctors-work-row-col7">
             <img src={info} alt="info" />
+            <img src={linePhone} alt="line" />
             <h1>01</h1>
             <div className="forDoctors-work-row-col-content">
               <h3>
@@ -41,6 +43,7 @@ function Work() {
           <img src={line} alt="line" />
           <div className="forDoctors-work-row-col7">
             <img src={info} alt="info" />
+            <img src={linePhone} alt="line" />
             <h1>02</h1>
             <div className="forDoctors-work-row-col-content">
               <h3>
@@ -67,6 +70,7 @@ function Work() {
           </div>
           <div className="forDoctors-work-row-col7">
             <img src={info} alt="info" />
+            <img src={linePhone} alt="line" />
             <h1>03</h1>
             <div className="forDoctors-work-row-col-content">
               <img src={line} alt="line" />

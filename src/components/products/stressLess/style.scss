@@ -6,36 +6,38 @@
   z-index: 3;
 
   .container {
-    padding: 100px 100px;
+    padding: 100px 150px;
     & > h2 {
       margin-bottom: 85px;
     }
     @media only screen and (max-width: 1359.98px) {
-      padding: 100px 50px;
+      padding: 100px 100px;
     }
     @media only screen and (max-width: 1199.98px) {
-      padding: 100px 20px;
+      padding: 100px 50px;
       & > h2 {
         margin-left: 20px;
       }
     }
     @media only screen and (max-width: 991.98px) {
-      padding: 60px 20px;
+      padding: 60px 38px;
       & > h2 {
         font-size: 36px;
         margin: auto;
         margin-bottom: 60px;
         max-width: 400px;
-        padding-right: 40px;
+        width: 90%;
+        margin-left: 0;
+        // padding-right: 40px;
       }
     }
     @media only screen and (max-width: 575.98px) {
-      padding: 50px 20px;
+      padding: 20px 38px 50px;
       & > h2 {
         font-size: 25px;
         margin-bottom: 37px;
-        max-width: 300px;
-        padding-right: 80px;
+        // max-width: 300px;
+        // padding-right: 80px;
       }
     }
   }
@@ -98,11 +100,13 @@
       flex-direction: column;
       align-items: center;
       & > div {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         width: auto;
         & > div {
+          height: auto;
           & > h1 {
             font-size: 30px;
+            margin: 0;
           }
           & > img {
             @media only screen and (max-width: 575.98px) {
@@ -112,10 +116,32 @@
           }
         }
         & > h4 {
-          max-width: 200px;
+          max-width: 80%;
         }
         & > p {
-          max-width: 300px;
+          // max-width: 300px;
+          margin-bottom: 0;
+        }
+      }
+      & > div:nth-of-type(1) {
+        & > div {
+          & > img {
+            width: 42px;
+          }
+        }
+      }
+      & > div:nth-of-type(2) {
+        & > div {
+          & > img {
+            width: 46px;
+          }
+        }
+      }
+      & > div:nth-of-type(3) {
+        & > div {
+          & > img {
+            width: 49px;
+          }
         }
       }
     }

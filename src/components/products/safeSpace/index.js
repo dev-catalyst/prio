@@ -1,6 +1,7 @@
 import React from "react"
 import feed from "../../../assets/images/product/feed.png"
 import graph from "../../../assets/images/product/safeGraph.svg"
+import graphPhone from "../../../assets/images/product/safeGraphPhone.svg"
 
 import "./style.scss"
 
@@ -21,6 +22,7 @@ function SafeSpace() {
         <img src={feed} alt="feed" />
       </div>
       <img src={graph} alt="graph" />
+      <img src={graphPhone} alt="graphPhone" />
     </div>
   )
 }

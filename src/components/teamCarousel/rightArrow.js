@@ -10,7 +10,7 @@ function RightArrow({ style, onClick }) {
         position: "absolute",
         bottom: "0",
         transform: "translateX(100%) translateY(200%)",
-        left: "135px",
+        left: "105px",
         width: "63px",
         height: "63px",
         cursor: "pointer",

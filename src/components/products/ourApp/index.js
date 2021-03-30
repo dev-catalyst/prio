@@ -12,7 +12,11 @@ function OurApp() {
           <img src={phone} alt="Hello Rachel" />
           <div>
             <img src={wave} alt="wave" />
-            <h2>Our Gynaecological prio.one App</h2>
+            <h2>
+              Our Gynaecological
+              <br />
+              prio.one App
+            </h2>
             <p>
               The prio.one app doesn’t only provide you with a daily pill
               reminder – you will also get to know your body in a completely new

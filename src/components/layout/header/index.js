@@ -58,11 +58,15 @@ function Header() {
           />
         </span>
         <h1>
-          <img
+          {/* <img
             className="header-small-logo"
-            src={currentPath === "" ? prioLogoSmall : prioLogoSmallDark}
+            src={currentPath === "" ? prioLogo : prioLogoDark}
             alt={currentPath === "" ? "prio one" : "prio one"}
-          ></img>
+          /> */}
+          <object
+            className="header-small-logo"
+            data={currentPath === "" ? prioLogo : prioLogoDark}
+          ></object>
         </h1>
         <span
           className="header-small-link"

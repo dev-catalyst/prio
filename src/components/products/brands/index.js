@@ -15,14 +15,14 @@ function Brands() {
       </div>
       <div className="products-brands-information">
         <p>YOUR BODY, YOUR CHOICE</p>
-        <h2>Du hast die Wahl - uber 120 zugelassene Marken</h2>
+        <h2>Du hast die Wahl - über 120 zugelassene Marken</h2>
         <p>
           prio.one - der goldene Weg zu der fur dich passenden Antibabypille. Du
           willst mehr zu allen gelisteten Marken erfahren. Hier findest du
           Informationen zu uber 32 Herstellern.
         </p>
         <ArrowButton
-          text="Triff' das Team"
+          text="Zu den Marken"
           paddingRight="120px"
           color="#C25A3F"
           backgroundColor="rgba(218,164,154,0.3)"

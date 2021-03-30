@@ -10,14 +10,15 @@ function PlanInternational() {
     <div className="products-plan">
       <div className="container">
         <div className="products-plan-image">
-          <img src={plan} alt="plan international" />
+          {/* <img src={plan} alt="plan international" /> */}
+          <object data={plan}></object>
         </div>
         <div className="products-plan-content">
           <div className="products-plan-content-information">
             <p>SOCIAL IMPACT</p>
             <h2>
               Mit jeder Bestellung spenden wir 1,50 EUR an ein
-              Frauengesundheitsprojekt in Malawi.
+              Frauengesundheits&shy;projekt in Malawi.
             </h2>
             <p>
               Plan International has a bold new ambition to work with 100

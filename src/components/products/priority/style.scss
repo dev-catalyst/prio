@@ -4,15 +4,16 @@
   background-color: #fff;
 
   .container {
-    padding: 100px 0 100px 150px;
+    padding: 150px 0 100px 150px;
     @include flexCenter(space-between, flex-start, row);
 
     & > div:last-of-type {
       transform: translateY(60px);
+      padding-bottom: 60px;
     }
 
     @media only screen and (max-width: 1359.98px) {
-      padding: 100px 0px 100px 50px;
+      padding: 120px 0px 100px 50px;
     }
     @media only screen and (max-width: 991.98px) {
       padding: 100px 0 0;
@@ -21,7 +22,8 @@
       margin-bottom: 60px;
     }
     @media only screen and (max-width: 575.98px) {
-      padding: 50px 0px;
+      padding: 40px 0px 50px;
+      margin-bottom: 0px;
     }
   }
 

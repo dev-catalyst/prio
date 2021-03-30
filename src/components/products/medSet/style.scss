@@ -20,4 +20,16 @@
     background-color: #f5dbd2;
     z-index: -1;
   }
+  @media only screen and (max-width: 575.98px) {
+    background-size: 200%;
+    background-position: 90% 50%;
+    .container {
+      & > img {
+        padding-top: 40%;
+      }
+    }
+    &-lowerbg {
+      height: 18%;
+    }
+  }
 }

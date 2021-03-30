@@ -6,7 +6,7 @@
   z-index: 1;
 
   .container {
-    padding: 0 50px 100px;
+    padding: 0 50px 150px;
     @include flexCenter(space-evenly, center, row);
 
     & > img {
@@ -14,6 +14,7 @@
     }
 
     @media only screen and (max-width: 991.98px) {
+      padding: 0 50px 100px;
       flex-direction: column;
       & > img {
         max-width: 70%;
@@ -38,7 +39,8 @@
     max-width: 50%;
     & > h2 {
       margin-bottom: 34px;
-      padding-right: 35px;
+      // padding-right: 35px;
+      width: 90%;
     }
     & > p {
       margin-bottom: 29px;
@@ -57,10 +59,11 @@
       width: 400px;
     }
     @media only screen and (max-width: 575.98px) {
-      width: 300px;
+      width: 100%;
+      padding: 0 38px;
       & > h2 {
         margin-bottom: 24px;
-        padding-right: 50px;
+        // padding-right: 50px;
       }
       & > p {
         margin-bottom: 14px;
@@ -77,13 +80,22 @@
 
   & > img {
     position: absolute;
-    bottom: 75px;
+    bottom: 120px;
     width: 100%;
     z-index: -1;
+  }
 
+  & > img:first-of-type {
     @media only screen and (max-width: 575.98px) {
-      width: 160%;
-      right: 0;
+      display: none;
+    }
+  }
+
+  & > img:last-of-type {
+    display: none;
+    bottom: 85px;
+    @media only screen and (max-width: 575.98px) {
+      display: block;
     }
   }
 }

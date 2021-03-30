@@ -4,6 +4,9 @@
   background: url("../../../assets/images/forDoctors/carousel\ bg.png");
   background-size: 100% 50%;
   background-repeat: no-repeat;
+  @media only screen and (max-width: 575.98px) {
+    background-image: none;
+  }
   .about-topThreeCombo-image {
     position: absolute;
     right: 0;
@@ -35,7 +38,7 @@
 
     @media only screen and (max-width: 575.98px) {
       top: 450px;
-      right: 0;
+      right: -40%;
       width: 150%;
     }
   }

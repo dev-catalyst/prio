@@ -1,11 +1,14 @@
 .other-members {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 193px;
+  margin-bottom: 160px;
   z-index: -1;
 
   @media screen and (max-width: 766.98px) {
     margin-bottom: 100px;
+  }
+  @media screen and (max-width: 575.98px) {
+    margin-bottom: 80px;
   }
 
   .container {

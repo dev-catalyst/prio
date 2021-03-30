@@ -10,7 +10,7 @@ function LeftArrow({ style, onClick }) {
         position: "absolute",
         bottom: "0",
         transform: "translateX(150%) translateY(200%)",
-        left: "30px",
+        left: "0px",
         width: "63px",
         height: "63px",
         cursor: "pointer",

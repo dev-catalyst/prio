@@ -1,6 +1,6 @@
 .forDoctors-work {
   padding: 134px 0;
-  @media screen and (max-width: 891px) {
+  @media screen and (max-width: 991.98px) {
     padding: 80px 0;
   }
   @media screen and (max-width: 576px) {
@@ -23,8 +23,9 @@
 
   h2 {
     margin-bottom: 100px;
-    @media screen and (max-width: 891px) {
+    @media screen and (max-width: 991.98px) {
       margin-bottom: 0px;
+      width: 80%;
     }
   }
 
@@ -44,7 +45,11 @@
       margin: 0;
       line-height: 32px;
       padding: 0 41px;
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
+        padding: 0;
+        margin: 15px 0 25px;
+      }
+      @media screen and (max-width: 991.98px) {
         padding: 0;
         margin: 15px 0 25px;
       }
@@ -59,20 +64,21 @@
       -ms-flex: 0 0 58.333333%;
       flex: 0 0 58.333333%;
       max-width: 58.333333%;
-      @media screen and (max-width: 891px) {
+      position: relative;
+      @media screen and (max-width: 991.98px) {
         display: block;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
       }
-      & > img {
+      & > img:first-of-type {
         width: 55px;
         height: 55px;
-        @media screen and (max-width: 891px) {
+        @media screen and (max-width: 991.98px) {
           left: -62px;
           top: 50px;
         }
-        @media screen and (max-width: 891px) {
+        @media screen and (max-width: 991.98px) {
           left: 46px;
           width: 45px;
           height: 45px;
@@ -80,12 +86,22 @@
           position: relative;
         }
       }
+      & > img:last-of-type {
+        display: none;
+        @media screen and (max-width: 575.98px) {
+          display: block;
+          position: absolute;
+          bottom: -50px;
+          left: -38px;
+          width: 150px;
+        }
+      }
     }
     .forDoctors-work-row-col5 {
       -ms-flex: 0 0 41.666667%;
       flex: 0 0 41.666667%;
       max-width: 41.666667%;
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -97,9 +113,13 @@
       z-index: -1;
       left: 23%;
       top: 136px;
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
         left: -62px !important;
         top: 50px !important;
+      }
+
+      @media screen and (max-width: 575.98px) {
+        display: none;
       }
     }
   }
@@ -117,7 +137,7 @@
         width: 100%;
         padding-left: 90px;
       }
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
         display: none;
       }
     }
@@ -130,16 +150,16 @@
     & > img {
       left: 23% !important;
       top: 136px !important;
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
         left: -62px !important;
         top: 50px !important;
       }
     }
-    @media screen and (max-width: 891px) {
+    @media screen and (max-width: 991.98px) {
       margin-left: 0;
     }
-    @media screen and (max-width: 891px) {
-      padding-top: 50px;
+    @media screen and (max-width: 575.98px) {
+      padding-top: 40px;
     }
   }
 
@@ -149,6 +169,7 @@
 
     @media screen and (max-width: 576px) {
       padding-right: 0px;
+      padding-top: 40px;
     }
 
     & > img {
@@ -159,7 +180,7 @@
       position: relative;
       & > img {
         display: none;
-        @media screen and (max-width: 891px) {
+        @media screen and (max-width: 991.98px) {
           display: block;
           position: absolute;
           left: 0;
@@ -170,6 +191,9 @@
         @media screen and (max-width: 767px) {
           transform: translate(-25%, -25%);
         }
+        @media screen and (max-width: 575.98px) {
+          display: none;
+        }
       }
     }
     .forDoctors-work-row-col5 {
@@ -177,7 +201,7 @@
       & > img {
         width: 100%;
       }
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
         left: 0;
         order: 2;
         & > img {
@@ -196,7 +220,7 @@
       -ms-flex: 0 0 53.333333%;
       flex: 0 0 53.333333%;
       max-width: 53.333333%;
-      @media screen and (max-width: 891px) {
+      @media screen and (max-width: 991.98px) {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -226,6 +250,9 @@
     }
     @media only screen and (min-width: 1200px) {
       max-width: 1140px !important;
+    }
+    @media (min-width: 1440px) {
+      max-width: 1200px !important;
     }
   }
 }
