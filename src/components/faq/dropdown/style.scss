@@ -1,0 +1,66 @@
+@import "../../../styles/utilities/utilities";
+
+.dropdown {
+  width: 100%;
+
+  background-color: #f9f8f8;
+
+  &-container {
+    @include flexCenter(space-between, flex-start, column);
+
+    align-items: center;
+
+    &-div {
+      padding-top: 43px;
+      padding-bottom: 22px;
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      border-bottom: 1px solid #cfd3dd;
+      justify-content: space-between;
+      align-items: center;
+      @media only screen and (max-width: 575.98px) {
+        padding-top: 40px;
+        padding-bottom: 19px;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      padding: 0px;
+      color: #1c2b49;
+      font-size: 27px;
+      font-weight: 400;
+      font-family: "Euclid";
+      line-height: 45px;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 20px;
+        line-height: 32px;
+        margin: 0px;
+      }
+    }
+  }
+  button {
+    float: right;
+    border: none;
+    background-color: transparent;
+  }
+}
+.drop-info-container {
+  width: 100%;
+  max-width: 888px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 991px) {
+    max-width: 720px;
+  }
+
+  @media (max-width: 767px) {
+      max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0;
+  }
+}

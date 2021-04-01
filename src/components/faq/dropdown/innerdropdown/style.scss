@@ -1,0 +1,36 @@
+@import "../../../../styles//utilities/utilities";
+
+.innerdrop {
+  align-items: center;
+  &-container {
+    align-items: center;
+    padding-bottom: 84px;
+
+    &-div {
+      justify-content: flex-start;
+    }
+  }
+}
+.btn-inner-add {
+  cursor: pointer;
+  @media only screen and (max-width: 575px) {
+    img {
+      position: relative;
+      top: 8px;
+     width: 35px;
+      height: 35px;
+    }
+  }
+}
+.btn-inner-collapse {
+  cursor: pointer;
+
+  @media only screen and (max-width: 575px) {
+    img {
+      position: relative;
+      top: 8px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../../../styles/utilities/utilities";
+
+.faqellipse-wrapper {
+  background-color: #f9f8f8;
+  padding-top: 229px;
+  padding-bottom: 154px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  @media only screen and (max-width: 1200px) {
+    padding-top: 200px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    top: unset;
+    bottom: 0;
+  }
+  @media only screen and (max-width: 575.98px) {
+   
+    
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+.faqellipse-image {
+  height: auto;
+  position: absolute;
+  width: 46%;
+  z-index: -1;
+
+  right: 0;
+
+  @media only screen and (min-width: 2000px) {
+    width: 42%;
+    top: -160px;
+  }
+  @media only screen and (max-width: 1200.98px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 991.98px) {
+    width: 60%;
+  }
+  @media only screen and (max-width: 767.98px) {
+    width: 70%;
+    bottom: 35px;
+  }
+  @media only screen and (max-width: 575.98px) {
+   
+   
+  }
+
+  @media only screen and (max-width: 454.98px) {
+
+    
+  }
+}
+.faqellipse {
+  width: 100%;
+
+  z-index: 1;
+  @include flexCenter(center, center, row);
+  font-family: "Euclid";
+  @media only screen and (max-width: 991.98px) {
+    padding-right: 0;
+  }
+
+  &-info {
+    @include flexCenter(center, center, column);
+    max-width: 633px;
+    margin: auto;
+    @media only screen and(max-width: 991.98px) {
+      flex-direction: column;
+    }
+
+    &-heading {
+      color: $secondary-color;
+      font-size: 42px;
+      font-weight: 400;
+      font-family: "Euclid";
+      max-width: 590px;
+      line-height: 68px;
+      @media only screen and (max-width: 575.98px) {
+        font-size: 25px;
+        line-height: 39.5px;
+      }
+    }
+    &-description {
+      font-size: 21px;
+      font-weight: 400;
+      color: rgba(28, 43, 73, 0.7);
+      text-align: center;
+      margin: 0;
+      line-height: 38px;
+      letter-spacing: -1.5%;
+      @media only screen and (max-width: 767px) {
+        padding: 0px 40px;
+    }
+
+    }
+  }
+}
