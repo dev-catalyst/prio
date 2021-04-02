@@ -58,9 +58,16 @@
   }
 
   @media (max-width: 767px) {
-      max-width: 100%;
+    max-width: 100%;
     padding-left: 40px;
     padding-right: 40px;
     margin: 0;
+  }
+
+  &-loader {
+    font-size: 30px;
+    color: $secondary-color;
+    opacity: 0.7;
+    @include flexCenter(center, center, row);
   }
 }

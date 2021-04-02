@@ -1,24 +1,52 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import InnerDropDown from "./innerdropdown"
+import axios from "axios"
 import "./style.scss"
 
 function Dropdown() {
-  const [index,setIndex] = useState(-1);
+  const [index, setIndex] = useState(-1)
+  const [data, setData] = useState(null)
+  const [loader, setLoader] = useState(false)
+  const feechFaq = async () => {
+    try {
+      setLoader(true)
+      const response = await axios.get(
+        "https://romy-dev.dev//api/v/content/faqs/de-DE"
+      )
+      console.log(response)
+      if (response.data) {
+        setData(response.data)
+      } else {
+        setData(null)
+      }
+      setLoader(false)
+    } catch (error) {
+      console.error(error)
+      setLoader(false)
+    }
+  }
+  useEffect(() => {
+    feechFaq()
+  }, [])
+  console.log("data", data)
   return (
-    
     <div className="dropdown">
-     <div className="drop-info-container">
-        {faq.map((item, idx) => {
-          console.log("index", idx, item)
-          return (
-            <div>
-              <div className="dropcontainer">
-              {" "}
-              <InnerDropDown item={item} idx={idx} index={index} setIndex={setIndex} />
+      <div className="drop-info-container">
+        {loader && (
+          <span className="drop-info-container-loader">Loading...</span>
+        )}
+        {!loader &&
+          data &&
+          data.map((item, i) => (
+            <div className="dropcontainer" key={item.id}>
+              <InnerDropDown
+                item={item}
+                idx={i}
+                index={index}
+                setIndex={setIndex}
+              />
             </div>
-            </div>
-          )
-        })}
+          ))}
       </div>
     </div>
   )
@@ -37,40 +65,39 @@ const faq = [
       {
         question: "How does Femy Club work?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
       {
         question: "Who is Femy Club for?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
       {
         question: "Is shipping free?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
       {
         question: "Where is Femy Club available?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
       {
         question: "How much does Femy Club cost?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
       {
         question: "What information does Femy Club need from me?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
       {
         question: "Does Femy Club accept health insurance plans?",
         answer:
-        "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
+          "Mit prio.one starten wir unsere eigene kleine Revolution des Gesundheitssystems: Wir bieten einen Verschreibungsservice für die Antibabypille, dank dem du den Gang zu Arzt und Apotheke endlich den Rücken kehren kannst. Mit prio.one landet deine, auf Basis deiner Bedürfnisse gewählte, Antibabypille ganz unkompliziert direkt in deinen Briefkasten – und weil wir (und ihr) Geschenke lieben, legen wir noch bunte Goodies dazu.",
       },
     ],
- 
   },
   {
     title: "Versand und Lieferung",
@@ -100,7 +127,6 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
-  
   },
   {
     title: "Verschreibungen",
@@ -130,7 +156,6 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
-  
   },
   {
     title: "Refills",
@@ -160,7 +185,6 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
-
   },
   {
     title: "Side Effects",
@@ -190,7 +214,6 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
- 
   },
   {
     title: "Privacy and Security",
@@ -220,7 +243,6 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
-  
   },
   {
     title: "Payments",
@@ -250,7 +272,6 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
- 
   },
   {
     title: "Medication",
@@ -280,6 +301,5 @@ const faq = [
         question: "Does Femy Club accept health insurance plans?",
       },
     ],
- 
   },
 ]

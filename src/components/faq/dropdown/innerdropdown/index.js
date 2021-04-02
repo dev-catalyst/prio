@@ -22,7 +22,7 @@ const InnerDropDown = ({ item, idx, index, setIndex }) => {
   return (
     <React.Fragment>
       <div className="dropdown-container-div" key={`${"faq" + idx}`}>
-        {" "}
+       
         <ul className="dropdown-container-title">{item.title}</ul>
         {!openModal ? (
           <div className="btn-inner-add">
@@ -33,12 +33,12 @@ const InnerDropDown = ({ item, idx, index, setIndex }) => {
             <img src={subtract} alt="minus" onClick={handleModal} />
           </div>
         )}
-      </div>{" "}
+      </div>
       {openModal && (
         <div className="innerdrop">
           <div className="innerdrop-container">
             <div>
-              {item.subtitle.map((subtitle, index) => {
+              {item.question_answers && item.question_answers.map((subtitle, index) => {
                 return (
                   <div
                     className="innerdrop-container-div"
